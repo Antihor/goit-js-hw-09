@@ -2,7 +2,7 @@ const startRef = document.querySelector('button[data-start]');
 const stopRef = document.querySelector('button[data-stop]');
 const bodyRef = document.querySelector('body');
 
-let timeoutId = null;
+let timerId = null;
 
 startRef.addEventListener('click', onStart);
 stopRef.addEventListener('click', onStop);
