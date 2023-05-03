@@ -2,10 +2,10 @@ const startRef = document.querySelector('button[data-start]');
 const stopRef = document.querySelector('button[data-stop]');
 const bodyRef = document.querySelector('body');
 
-let timerId = null;
-
 startRef.addEventListener('click', onStart);
 stopRef.addEventListener('click', onStop);
+
+let timerId = null;
 
 function onStart() {
   timerId = setInterval(() => {
@@ -14,6 +14,7 @@ function onStart() {
   startRef.disabled = true;
   stopRef.disabled = false;
 }
+
 function onStop() {
   clearInterval(timerId);
   startRef.disabled = false;
